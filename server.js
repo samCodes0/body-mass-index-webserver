@@ -9,6 +9,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// this is used to define where to look for the stylesheet and other static files that we might add
 const staticFileLocation = path.join(__dirname, 'public');
 app.use(express.static(staticFileLocation));
 
