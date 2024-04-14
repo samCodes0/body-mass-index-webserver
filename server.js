@@ -9,6 +9,9 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+const staticFileLocation = path.join(__dirname, 'public');
+app.use(express.static(staticFileLocation));
+
 // configure it to use the Handlebars template engine and
 // work with template files in the views directory
 app.set('views', path.join(__dirname, 'views'))
